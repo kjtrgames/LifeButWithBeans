@@ -12,8 +12,9 @@ class ClickablePlot(Plot):
         self.if_click = if_click
 
     
-    def render(self, x, y, cx, cy, cz, size):
-        super().render(x, y, cx, cy, cz, size)
+    
+    def render(self, x: int, y: int, cx: int, cy: int, cz: int):
+        super().render(x, y, cx, cy, cz)
         if self.colrect.collidepoint(pygame.mouse.get_pos()) and pygame.mouse.get_pressed()[0]: # TODO Item/ItemGroupとの当たり判定問題の解決
             self.if_click(self)
             """

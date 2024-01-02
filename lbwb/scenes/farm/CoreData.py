@@ -4,7 +4,7 @@ from lbwb.item.Item import Item
 from lbwb.item.ItemGroup import ItemGroup
 
 class CoreData():
-    _map: list[list[Plot]]
+    map: list[list[Plot]]
     _has_igroup: int = 0
     igroups:list[ItemGroup] = [None, None]
     
@@ -26,19 +26,19 @@ class CoreData():
     selected_beans:str
     
     @staticmethod
-    def setMap(new_map:list[list[Item]]) -> None: CoreData._map = new_map
+    def setMap(new_map:list[list[Item]]) -> None: CoreData.map = new_map
     
     @staticmethod
-    def getPlotWithPos(ix:int, iy:int) -> Plot: return CoreData._map[iy][ix]
+    def getPlotWithPos(ix:int, iy:int) -> Plot: return CoreData.map[iy][ix]
     @staticmethod
-    def setPlotWithPos(ix:int, iy:int, new:Plot) -> None: CoreData._map[iy][ix] = new
+    def setPlotWithPos(ix:int, iy:int, new:Plot) -> None: CoreData.map[iy][ix] = new
     
     @staticmethod
     def beanRegister():
         pass
     
     @staticmethod
-    def getMapSizeX() -> int: return len(CoreData._map[0])
+    def getMapSizeX() -> int: return len(CoreData.map[0])
     @staticmethod
-    def getMapSizeY() -> int: return len(CoreData._map)
+    def getMapSizeY() -> int: return len(CoreData.map)
     

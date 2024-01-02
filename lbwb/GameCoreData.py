@@ -6,7 +6,7 @@ class GameCoreData():
     ------------
     This class is used to store core game data."""
     display_size_x, display_size_y = 1080, 720
-    DISPLAY_CENTER = (display_size_x//2, display_size_y//2)
+    display_center = (display_size_x//2, display_size_y//2)
     scene_resistry = "lbwb"
     scene = "title"#TODO titleから始め、プレイボタンを追加
     scene = "farm"

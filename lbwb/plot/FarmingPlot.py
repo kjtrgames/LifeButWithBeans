@@ -10,8 +10,8 @@ class FarmingPlot(Plot):
         self.tobe = tobe #TODO Use ReturnScript and this class will be Plot
         self.whentobe = whentobe
 
-    def render(self, x: int, y: int, cx: int, cy: int, cz: float, size: int):
-        super().render(x=x, y=y, cx=cx, cy=cy, cz=cz, size=size)
+    def render(self, x: int, y: int, cx: int, cy: int, cz: float):
+        super().render(x=x, y=y, cx=cx, cy=cy, cz=cz)
         self.count += 1
         if self.whentobe == self.count:
             CoreData = importlib.import_module("lbwb.scenes.farm.CoreData")

@@ -1,9 +1,9 @@
 import pygame
 from lbwb.GameCoreData import GameCoreData
 
-from lbwb.util.AssetLoader import AssetLoader
-from lbwb.util.Renders import Renders
-from lbwb.util.SurfaceModifer import SurfaceModifier
+from synfpyg.util.AssetLoader import AssetLoader
+from synfpyg.util.Renders import Renders
+from synfpyg.util.SurfaceModifer import SurfaceModifier
 
 class Item():
     

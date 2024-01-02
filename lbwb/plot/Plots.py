@@ -9,6 +9,7 @@ class Plots():
         
         def test2_act(self:ClickablePlot):
             CoreData.setPlotWithPos(self.ix, self.iy, self.tobe)
+            print("TEST2 got EMPTY")
         
         self.EMPTY:Plot = Plot(name="empty", texture_registry="lbwb", image_name="empty.png")
         self.TEST:Plot = Plot(name="test", texture_registry="lbwb", image_name="test.png")

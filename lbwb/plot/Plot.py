@@ -1,9 +1,9 @@
 import pygame
 
 from lbwb.GameCoreData import GameCoreData
-from lbwb.util.AssetLoader import AssetLoader
-from lbwb.util.Renders import Renders
-from lbwb.util.SurfaceModifer import SurfaceModifier
+from synfpyg.util.AssetLoader import AssetLoader
+from synfpyg.util.Renders import Renders
+from synfpyg.util.SurfaceModifer import SurfaceModifier
 
 
 class Plot():
@@ -33,12 +33,13 @@ class Plot():
 
         self.image = AssetLoader.loadAssetTexture(registry_name=texture_registry, texture_type="plot", name=aimage_name, picture_type=aimage_type)
     
-    def render(self, x:int, y:int, cx:int, cy:int, cz:int, size:int):
+    def render(self, x:int, y:int, cx:int, cy:int, cz:int):
         self.ix = x
         self.iy = y
-        ppx = x*size*13//16 + cx*size//16 + GameCoreData.DISPLAY_CENTER[0]
+        size = 1600//cz
+        ppx = x*size*13//16 + cx*size//16 + GameCoreData.display_center[0]
         ppx-= y*size* 5//16
-        ppy = y*size*10//16 + cy*size//16 + GameCoreData.DISPLAY_CENTER[1]
+        ppy = y*size*10//16 + cy*size//16 + GameCoreData.display_center[1]
         
         colx = size* 1//16 + ppx
         coly = size* 6//16 + ppy

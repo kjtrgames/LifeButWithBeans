@@ -1,0 +1,29 @@
+.
+└── <game name registry>
+    ├── GameCoreData.py
+    |   └── class GameCoreData()
+    |       ├── display_size_x: int
+    |       ├── display_size_y: int
+    |       ├── display_center: tuple[int, int]
+    |       ├── scene_registry: str
+    |       ├── scene: str
+    |       └── screen = pygame.display.set_mode(
+    |               (display_size_x, display_size_y),
+    |               flags=pygame.RESIZABLE
+    |           )
+    ├── GameMainLoop.py
+    :
+    └── scenes
+        ├── <SceneName>.py
+        |   ├── class <SceneName>()
+        |   |   ├── class CoreData()
+        |   |   | (you can use propaties anything)
+        |   |   | (so you do not have to write this class)
+        |   |   :
+        |   └── class MainLoop()
+        |       ├── def __init__(): raise
+        |       ├── def render()
+        |       |
+        |       :
+        ├── <Scene2Name>.py
+        :

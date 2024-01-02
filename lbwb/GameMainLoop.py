@@ -3,8 +3,8 @@ import sys
 import importlib
 
 from lbwb.GameCoreData import GameCoreData
-from lbwb.util.AssetLoader import AssetLoader
-from lbwb.util.HelpfulFuncs import HelpfulFuncs
+from synfpyg.util.AssetLoader import AssetLoader
+from synfpyg.util.HelpfulFuncs import HelpfulFuncs
 
 
 class GameMainLoop():
@@ -33,7 +33,7 @@ class GameMainLoop():
             #exec("import " + scene_resistry + ".scenes." + scene)
             #afterdo = eval(scene_resistry + ".scenes." + scene + ".render(GameCoreData.screen)")
             sceneobj = importlib.import_module(GameCoreData.getSceneName())
-            sceneobj.render()
+            sceneobj.MainLoop.render()
 
             pygame.display.update()
             self.timer.tick(30)

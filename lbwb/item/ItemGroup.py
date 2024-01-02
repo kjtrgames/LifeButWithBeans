@@ -3,10 +3,10 @@ import pygame
 
 from lbwb.GameCoreData import GameCoreData
 from lbwb.item.Item import Item
-from lbwb.util.AssetLoader import AssetLoader
-from lbwb.util.HelpfulFuncs import HelpfulFuncs
-from lbwb.util.SurfaceModifer import SurfaceModifier
-from lbwb.util.Renders import Renders
+from synfpyg.util.AssetLoader import AssetLoader
+from synfpyg.util.HelpfulFuncs import HelpfulFuncs
+from synfpyg.util.SurfaceModifer import SurfaceModifier
+from synfpyg.util.Renders import Renders
 
 class ItemGroup():
     has_item:list[Item]
@@ -42,7 +42,7 @@ class ItemGroup():
         
         if rects.collidepoint(pygame.mouse.get_pos()):
             itembar_bg = pygame.surface.Surface((GameCoreData.display_size_x-GameCoreData.itembar_width, GameCoreData.itembar_width,))
-            itembar_bg.fill(HelpfulFuncs.htColorCodeTranslater("#000"))
+            itembar_bg.fill(HelpfulFuncs.htCCT("#000"))
             itembar_bg.set_alpha(128)
             Renders.surfaceRender(itembar_bg, GameCoreData.itembar_width, y, itembar_bg.get_width(), itembar_bg.get_height())
             self._renderTheItemItHas(y)
